@@ -1,4 +1,4 @@
-# Python-Docker Boilerplate Generator
+# PyDocker Scaffolding
 
 A Python-based tool to generate a starter folder structure for new projects. This script helps you quickly set up a boilerplate with Docker support, scripts, and a basic Python application to get started immediately.
 
@@ -22,14 +22,14 @@ A Python-based tool to generate a starter folder structure for new projects. Thi
 Run the script using Python:
 
 ```bash
-python3 project_initializer.py
+python3 generator.py
 ```
 
 ### Script Prompts
 
 1. **Project Name**: Enter the name of your project. It should only include letters, numbers, underscores, and hyphens.
 2. **Base Docker Image**: Specify the base image for Docker (e.g., `python:3.9`). Defaults to `python:3.9`.
-3. **Build Arguments**: List any build arguments required for Docker (comma-separated).
+3. **Build Arguments**: List any build arguments required for Docker. Leave blank to finish.
 4. **Python Requirements**: Provide the Python packages your project needs (e.g., `flask`, `numpy`). Leave blank to finish.
 
 ## Output Structure
@@ -65,7 +65,7 @@ The script generates the following structure in the parent folder:
 1. Run the generator script:
 
    ```bash
-   python3 project_initializer.py
+   python3 generator.py
    ```
 
 2. Navigate to the generated project folder:
