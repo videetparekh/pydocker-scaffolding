@@ -18,7 +18,7 @@ def create_setup_script(project_path, build_args):
         for arg in build_args:
             setup_script.write(f"    --build-arg {arg}=${{{arg}}} \\\n")
         setup_script.write(f"    -t {os.path.basename(project_path)}_image:latest \\\n")
-        setup_script.write(f"    docker/\n")
+        setup_script.write("    -f docker/Dockerfile .\n")
     os.chmod(setup_path, 0o755)
 
 def create_run_script(project_path):
