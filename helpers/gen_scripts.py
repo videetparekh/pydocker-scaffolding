@@ -27,7 +27,7 @@ def create_run_script(project_path):
     with open(run_path, "w") as run_script:
         run_script.write("#!/bin/bash\n")
         run_script.write(f"docker run \\\n")
-        run_script.write(f"    -v $(pwd)/app:/app \\\n")
+        run_script.write(f"    -it -v $(pwd)/app:/app \\\n")
         run_script.write(f"    -w /app \\\n")
-        run_script.write(f"    --rm {os.path.basename(project_path)}_image:latest\n")
+        run_script.write(f"    --rm {os.path.basename(project_path)}_image:latest bash\n")
     os.chmod(run_path, 0o755)
