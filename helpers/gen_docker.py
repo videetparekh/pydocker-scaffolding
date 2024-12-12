@@ -14,3 +14,4 @@ def create_dockerfile(project_path, base_image, build_args):
         dockerfile.write("WORKDIR /app\n")
         dockerfile.write("COPY requirements.txt /app/\n")
         dockerfile.write("RUN pip install --no-cache-dir -r requirements.txt\n")
+        dockerfile.write("CMD [\"bash\"]\n")
